@@ -15,7 +15,7 @@ class Invoice implements XmlSerializable
     private string $customizationID = '1.0';
     private ?string $profileID =null;
     private ?string $id = null;
-    private bool $copyIndicator;
+    private bool $copyIndicator = false;
     private ?DateTime $issueDate = null;
     protected ?InvoiceTypeCode $invoiceTypeCode = InvoiceTypeCode::INVOICE;
     private ?string $note = null;

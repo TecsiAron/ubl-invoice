@@ -1,5 +1,5 @@
 {
-    "name": "TecsiAron/ubl-invoice",
+    "name": "tecsiaron/ubl-invoice",
     "description": "A modern object-oriented PHP library to create valid UBL and Peppol BIS 3.0 files",
     "keywords": [
         "ubl",

@@ -1,3 +1,23 @@
+# Changelog for version 1.17.0
+
+### New features & improvements
+
+- Add list of `VatExemptionCode` options
+
+# Changelog for version 1.16.0
+
+### New features & improvements
+
+- Add `<cac:StandardItemIdentification>` to `<cac:Item>`
+- Add `<cac:PayeeParty>` to `<Invoice>`
+
+# Changelog for version 1.15.5
+
+### New features & improvements
+
+- Don't output an InvoiceLine `<cac:TaxScheme />` when no `<cac:Price />` was set
+- Don't output `<cac:Item>` under InvoiceLine unless explicitely set
+
 # Changelog for version v1.15.4
 
 ### New features & improvements

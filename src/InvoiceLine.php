@@ -302,17 +302,15 @@ class InvoiceLine implements XmlSerializable
             ]);
         }
 
-        $writer->write([
-            Schema::CAC . 'Item' => $this->item,
-        ]);
+        if ($this->item !== null) {
+            $writer->write([
+                Schema::CAC . 'Item' => $this->item,
+            ]);
+        }
 
         if ($this->price !== null) {
             $writer->write([
                 Schema::CAC . 'Price' => $this->price
-            ]);
-        } else {
-            $writer->write([
-                Schema::CAC . 'TaxScheme' => null,
             ]);
         }
     }

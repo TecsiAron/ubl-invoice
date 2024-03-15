@@ -37,7 +37,7 @@ class Invoice implements XmlSerializable
     private array $additionalDocumentReferences = [];
     private string $documentCurrencyCode = 'EUR';
     private ?string $buyerReference = null;
-    private string $accountingCostCode;
+    private ?string $accountingCostCode = null;
     private ?InvoicePeriod $invoicePeriod = null;
     private ?Delivery $delivery = null;
     private ?OrderReference $orderReference = null;

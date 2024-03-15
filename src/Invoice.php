@@ -637,7 +637,7 @@ class Invoice implements XmlSerializable
 
         if ($this->invoiceTypeCode !== null) {
             $writer->write([
-                Schema::CBC . $this->xmlTagName . 'TypeCode' => $this->invoiceTypeCode
+                Schema::CBC . $this->xmlTagName . 'TypeCode' => $this->invoiceTypeCode->value
             ]);
         }
 

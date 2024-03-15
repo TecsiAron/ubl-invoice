@@ -1,5 +1,5 @@
 {
-    "name": "num-num/ubl-invoice",
+    "name": "TecsiAron/ubl-invoice",
     "description": "A modern object-oriented PHP library to create valid UBL and Peppol BIS 3.0 files",
     "keywords": [
         "ubl",
@@ -19,7 +19,7 @@
         "einvoice",
         "euinvoice"
     ],
-    "homepage": "https://github.com/num-num/ubl-invoice",
+    "homepage": "https://github.com/TecsiAron/ubl-invoice",
     "license": "MIT",
     "authors": [
         {

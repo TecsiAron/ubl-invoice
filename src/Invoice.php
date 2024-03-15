@@ -173,12 +173,16 @@ class Invoice implements XmlSerializable
     }
 
     /**
-     * @param InvoiceTypeCode $invoiceTypeCode
+     * @param InvoiceTypeCode|int $invoiceTypeCode
      * See also: src/InvoiceTypeCode.php
      * @return Invoice
      */
-    public function setInvoiceTypeCode(InvoiceTypeCode $invoiceTypeCode): Invoice
+    public function setInvoiceTypeCode(InvoiceTypeCode|int $invoiceTypeCode): Invoice
     {
+		if(is_int($invoiceTypeCode))
+        {
+            $invoiceTypeCode=InvoiceTypeCode::from($invoiceTypeCode);
+        }
         $this->invoiceTypeCode = $invoiceTypeCode;
         return $this;
     }

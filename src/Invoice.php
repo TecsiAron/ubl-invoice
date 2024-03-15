@@ -13,19 +13,19 @@ class Invoice implements XmlSerializable
     public string $xmlTagName = 'Invoice';
     private string $UBLVersionID = '2.1';
     private string $customizationID = '1.0';
-    private ?string $profileID;
-    private ?string $id;
+    private ?string $profileID =null;
+    private ?string $id = null;
     private bool $copyIndicator;
     private ?DateTime $issueDate = null;
     protected ?InvoiceTypeCode $invoiceTypeCode = InvoiceTypeCode::INVOICE;
-    private ?string $note;
+    private ?string $note = null;
     private ?DateTime $taxPointDate = null;
     private ?DateTime $dueDate = null;
     private ?PaymentTerms $paymentTerms = null;
     private ?Party $accountingSupplierParty = null;
     private ?Party $accountingCustomerParty = null;
     private ?Party $payeeParty = null;
-    private ?string $supplierAssignedAccountID;
+    private ?string $supplierAssignedAccountID = null;
     private ?PaymentMeans $paymentMeans = null;
     private ?TaxTotal $taxTotal = null;
     private ?LegalMonetaryTotal $legalMonetaryTotal= null;
@@ -36,7 +36,7 @@ class Invoice implements XmlSerializable
     /** @var AdditionalDocumentReference[] $additionalDocumentReference */
     private array $additionalDocumentReferences = [];
     private string $documentCurrencyCode = 'EUR';
-    private ?string $buyerReference;
+    private ?string $buyerReference = null;
     private string $accountingCostCode;
     private ?InvoicePeriod $invoicePeriod = null;
     private ?Delivery $delivery = null;
@@ -179,7 +179,7 @@ class Invoice implements XmlSerializable
      */
     public function setInvoiceTypeCode(InvoiceTypeCode|int $invoiceTypeCode): Invoice
     {
-		if(is_int($invoiceTypeCode))
+        if(is_int($invoiceTypeCode))
         {
             $invoiceTypeCode=InvoiceTypeCode::from($invoiceTypeCode);
         }

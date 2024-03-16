@@ -15,7 +15,7 @@ class Invoice implements XmlSerializable
     private string $customizationID = '1.0';
     private ?string $profileID =null;
     private ?string $id = null;
-    private bool $copyIndicator = false;
+    private ?bool $copyIndicator = null;
     private ?DateTime $issueDate = null;
     protected ?InvoiceTypeCode $invoiceTypeCode = InvoiceTypeCode::INVOICE;
     private ?string $note = null;
@@ -101,18 +101,18 @@ class Invoice implements XmlSerializable
     }
 
     /**
-     * @return bool
+     * @return bool|null
      */
-    public function isCopyIndicator(): bool
+    public function isCopyIndicator(): ?bool
     {
         return $this->copyIndicator;
     }
 
     /**
-     * @param bool $copyIndicator
+     * @param bool|null $copyIndicator
      * @return Invoice
      */
-    public function setCopyIndicator(bool $copyIndicator): Invoice
+    public function setCopyIndicator(?bool $copyIndicator): Invoice
     {
         $this->copyIndicator = $copyIndicator;
         return $this;
